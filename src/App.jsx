@@ -5,10 +5,10 @@ import Blog from './pages/blog';
 
 function App() {
  return (
-  <div className='App'>
+  <div className='App container'>
    <Routes>
     <Route path='/' Component={Home}></Route>
-    <Route path='/blog' Component={Blog}></Route>
+    <Route path='/blog/:id' Component={Blog}></Route>
    </Routes>
   </div>
  );
