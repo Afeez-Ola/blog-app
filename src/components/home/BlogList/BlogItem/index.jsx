@@ -1,10 +1,11 @@
 import React from 'react';
 
-const BlogItem = (props) => {
+const BlogItem = ({
+ blog: { id, title, description, category, subCategory },
+}) => {
  return (
-  <div key={props.id} className='blogItem_wrapper'>
-   <h1>Blog Item</h1>
-   <p>{props.blog}</p>
+  <div className='blogItem_wrapper'>
+   <h1>Blog Item </h1>
   </div>
  );
 };
