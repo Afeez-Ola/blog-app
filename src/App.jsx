@@ -11,8 +11,8 @@ function App() {
    <Routes>
     <Route path='/' Component={Home}></Route>
     <Route path='/blog/:id' Component={Blog}></Route>
+    
    </Routes>
-   <BlogList blogs={blogList}></BlogList>
   </div>
  );
 }
