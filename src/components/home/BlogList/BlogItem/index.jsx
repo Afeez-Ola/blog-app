@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css';
+import Chip from '../../../common/Chip';
 
 const BlogItem = ({
  blog: {
@@ -16,7 +17,9 @@ const BlogItem = ({
  return (
   <div className='blogItem_wrapper'>
   <img src={cover}></img>
-   <h1>Blog Item </h1>
+  <Chip label={category}></Chip>
+   <h3>{title}</h3>
+   <p className='blogItem_description'>{description}</p>
   </div>
  );
 };
