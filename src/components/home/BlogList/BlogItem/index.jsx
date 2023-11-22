@@ -10,10 +10,12 @@ const BlogItem = ({
   authorName,
   authorAvatar,
   category,
+  cover
  },
 }) => {
  return (
   <div className='blogItem_wrapper'>
+  <img src={cover}></img>
    <h1>Blog Item </h1>
   </div>
  );
