@@ -8,6 +8,7 @@ const Home = () => {
  const [blogs, setBlogs] = useState(blogList);
 
  function handleSearch(e) {
+    e.preventDefault()
   const searchValue = e.target.value;
   setBlogs(
    blogList.filter((blog) =>
