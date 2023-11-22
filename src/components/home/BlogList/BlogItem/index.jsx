@@ -1,7 +1,16 @@
 import React from 'react';
+import './styles.css';
 
 const BlogItem = ({
- blog: { id, title, description, category, subCategory },
+ blog: {
+  id,
+  title,
+  description,
+  createdAt,
+  authorName,
+  authorAvatar,
+  category,
+ },
 }) => {
  return (
   <div className='blogItem_wrapper'>
