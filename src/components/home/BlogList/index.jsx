@@ -1,12 +1,15 @@
 import React from 'react';
-import "./styles.css"
+import BlogItem from './BlogItem';
+import './styles.css';
 
 const BlogList = (props) => {
-    return (
-        <div>
-            
-        </div>
-    );
-}
+ return (
+  <div className='blogList_wrapper'>
+   {props.blogs.map((blog) => {
+    <BlogItem blog={blog} key={blog.id} />;
+   })}
+  </div>
+ );
+};
 
 export default BlogList;
