@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
  return (
@@ -14,6 +15,7 @@ const Header = () => {
     Awesome place to make oneself <br /> productive and entertained through
     daily updates.
    </p>
+   <button><Link to={"/new"} className='new_blog'>New Blog</Link></button>
   </header>
  );
 };

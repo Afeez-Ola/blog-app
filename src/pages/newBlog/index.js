@@ -9,6 +9,7 @@ const AddBlog = () => {
  const navigate = useNavigate();
 
  const [formData, setFormData] = useState({
+  id: blogList.length + 1,
   title: '',
   category: '',
   description: '',
