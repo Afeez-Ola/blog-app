@@ -1,0 +1,9 @@
+.emptyList_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.emptyList_wrapper img {
+    max-width: 250px;
+    width: 100%;
+}
