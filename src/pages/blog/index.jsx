@@ -1,6 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { blogList } from '../../config/data';
+import { Link } from 'react-router-dom';
+import Chip from '../../components/common/Chip';
+import './styles.css';
 
 const Blog = () => {
  const { id } = useParams();
