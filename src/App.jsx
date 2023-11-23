@@ -4,6 +4,7 @@ import Home from './pages/home';
 import Blog from './pages/blog';
 import BlogList from './components/home/BlogList';
 import { blogList } from './config/data';
+import AddBlog from './pages/newBlog';
 
 function App() {
  return (
@@ -11,7 +12,7 @@ function App() {
    <Routes>
     <Route path='/' Component={Home}></Route>
     <Route path='/blog/:id' Component={Blog}></Route>
-    
+    <Route path='/new' Component={AddBlog}></Route>
    </Routes>
   </div>
  );
