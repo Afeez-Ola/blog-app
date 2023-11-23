@@ -1,9 +1,13 @@
 // BlogForm.js
 import React, { useState } from 'react';
 import { blogList } from '../../config/data';
+import { useNavigate } from 'react-router-dom';
+
 import './styles.css';
 
 const AddBlog = () => {
+ const navigate = useNavigate();
+
  const [formData, setFormData] = useState({
   title: '',
   category: '',
@@ -24,6 +28,7 @@ const AddBlog = () => {
   e.preventDefault();
   blogList.push(formData);
   console.log('Form submitted:', blogList);
+  navigate('/');
  };
 
  return (
