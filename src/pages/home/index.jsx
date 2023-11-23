@@ -3,6 +3,7 @@ import Header from '../../components/home/Header';
 import SearchBar from '../../components/home/SearchBar';
 import { blogList } from '../../config/data';
 import BlogList from '../../components/home/BlogList';
+import EmptyList from '../../components/common/EmptyList';
 
 const Home = () => {
  const [blogs, setBlogs] = useState(blogList);
@@ -37,7 +38,11 @@ const Home = () => {
     clearSearch={clearSearch}
     value={searchValue}
    ></SearchBar>
-   <BlogList blogs={blogs}></BlogList>
+   {!blogs.length ? (
+    <EmptyList></EmptyList>
+   ) : (
+    <BlogList blogs={blogs}></BlogList>
+   )}
   </div>
  );
 };
