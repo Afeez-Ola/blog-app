@@ -13,25 +13,26 @@ const Home = () => {
   setSearchValue(e.target.value);
   setBlogs(
    blogList.filter((blog) =>
-    blog.category.toLowerCase().includes(searchValue.toLowerCase()),
+    blog.category.toLowerCase().includes(searchValue.toLowerCase().trim()),
    ),
   );
  }
 
  function clearSearch(e) {
   e.preventDefault();
+  setBlogs(blogList);
   setSearchValue('');
-  setBlogs(
-   blogList.filter((blog) =>
-    blog.category.toLowerCase().includes(searchValue.toLowerCase()),
-   ),
-  );
+ }
+
+ function formSubmit(e) {
+  handleSearch();
  }
 
  return (
   <div>
    <Header></Header>
    <SearchBar
+    formSubmit={formSubmit}
     handleSearch={handleSearch}
     clearSearch={clearSearch}
     value={searchValue}
