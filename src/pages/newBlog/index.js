@@ -1,5 +1,6 @@
 // BlogForm.js
 import React, { useState } from 'react';
+import { blogList } from '../../config/data';
 import './styles.css';
 
 const AddBlog = () => {
@@ -8,6 +9,10 @@ const AddBlog = () => {
   category: '',
   description: '',
   coverImage: '',
+  subCategory: ['frontend', 'ui/ux', 'design'],
+  authorName: 'John Doe',
+  authorAvatar: '/asset/author.jpg',
+  createdAt: 'June 03, 2021',
  });
 
  const handleChange = (e) => {
@@ -17,11 +22,13 @@ const AddBlog = () => {
 
  const handleSubmit = (e) => {
   e.preventDefault();
-  console.log('Form submitted:', formData);
+  blogList.push(formData);
+  console.log('Form submitted:', blogList);
  };
 
  return (
   <form onSubmit={handleSubmit}>
+   <h3>New Blog</h3>
    <label>
     Title:
     <input
